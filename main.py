@@ -21,7 +21,6 @@ def search(text):
         break
   if not bracket_block:
     print("Success")
-
 def main():
   text = input()
   match text:
@@ -33,6 +32,7 @@ def main():
       f = open(text, "r")
       search(f)
     case _:
-      search(text)
+      if "I" in text:
+        search(text)
 
 main()   
