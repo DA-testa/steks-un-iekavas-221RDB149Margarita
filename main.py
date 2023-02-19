@@ -11,9 +11,11 @@ def search(text):
   for index, letter in enumerate(text):
     if letter in "([{":
       bracket_block.append(Bracket(letter, index))
-    
+      print(letter)
      
     if letter in "}])":
+     if not bracket_block:
+       return index+1
      last = bracket_block.pop()
      
      if are_matching(last.char, letter):
@@ -21,7 +23,8 @@ def search(text):
      else:
         print(index+1)
         break
-    if not bracket_block:
+  
+  if not bracket_block:
       print("Success")
 def main():
   text = input().upper();
