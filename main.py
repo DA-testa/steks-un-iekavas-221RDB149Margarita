@@ -15,12 +15,11 @@ def search(text):
      
     if letter in "}])":
      if not bracket_block:
-       return index+1
+       print(index+1)
+       break
      last = bracket_block.pop()
      
-     if are_matching(last.char, letter):
-          del bracket_block[-1]
-     else:
+     if not are_matching(last.char, letter):
         print(index+1)
         break
   
@@ -39,4 +38,4 @@ def main():
       text = input()
       search(text)
 
-main()   
+main()
