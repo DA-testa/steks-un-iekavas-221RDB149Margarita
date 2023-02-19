@@ -30,8 +30,8 @@ def main():
       f = open(text, "r")
       search(f)
     case _:
-       print("enter text below")
+      print("enter text below")
       text = input()
-        search(text)
+      search(text)
 
 main()   
