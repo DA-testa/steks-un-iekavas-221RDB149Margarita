@@ -22,17 +22,16 @@ def search(text):
   if not bracket_block:
     print("Success")
 def main():
-  text = input()
+  text = input().upper();
   match text:
-    case "I":
-      text = input()
-      search(text)
     case "F":
+      print("enter filename")
       text = input()
       f = open(text, "r")
       search(f)
     case _:
-      if "I" in text:
+       print("enter text below")
+      text = input()
         search(text)
 
 main()   
