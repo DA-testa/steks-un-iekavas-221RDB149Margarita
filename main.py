@@ -11,7 +11,7 @@ def search(text):
   for index, letter in enumerate(text):
     if letter in "([{":
       bracket_block.append(Bracket(letter, index))
-      print(letter)
+
      
     if letter in "}])":
      if not bracket_block:
